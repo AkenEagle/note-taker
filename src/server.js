@@ -56,10 +56,10 @@ app.delete("/api/notes/:id", (req, res) => {
   // Read from db.json
   fs.readFile("./db/db.json", "utf-8", (err, data) => {
     // Get the notes from the file in JSON
-    let notes = JSON.parse(data);
+    const notes = JSON.parse(data);
 
     // Delete the note with that ID in a new array
-    let newNotes = notes.filter((note) => note.id !== noteID);
+    const newNotes = notes.filter((note) => note.id !== noteID);
 
     // Write the new notes in db.json
     fs.writeFile("./db/db.json", JSON.stringify(newNotes), (err) => {
