@@ -1,10 +1,10 @@
 const express = require("express");
-const app = express();
 const path = require("path");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-const PORT = 3000;
+const PORT = process.env.port || 3000;
+const app = express();
 
 // Route for index file
 app.get("/", (req, res) => {
