@@ -13,13 +13,13 @@ app.use(express.json());
 
 // Route for notes application
 app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/notes.html"));
+  res.sendFile(path.join(__dirname, "../public/notes.html"));
 });
 
 // Get saved notes
 app.get("/api/notes", (req, res) => {
   // Read the db.json
-  fs.readFile("./db/db.json", "utf8", (err, data) => {
+  fs.readFile("./db/db.json", "utf-8", (err, data) => {
     // Send the data as JSON object
     res.send(JSON.parse(data));
   });
@@ -76,7 +76,7 @@ app.delete("/api/notes/:id", (req, res) => {
 
 // Route for index file
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/index.html"));
+  res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 app.listen(PORT, () => {
