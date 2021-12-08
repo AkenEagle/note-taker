@@ -7,7 +7,7 @@ const PORT = process.env.port || 3000;
 const app = express();
 
 // Route for index file
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
