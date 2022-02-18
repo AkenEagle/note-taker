@@ -12,7 +12,7 @@
 
 # Links
 
-Deployed Application: 
+Deployed Application: https://note-taker-harman.herokuapp.com/
 
 ## Description
 
@@ -107,3 +107,7 @@ POST body:
   This will delete a note by ID
 
 ## Screenshots
+
+<img src="./screenshots/1.png"/>
+
+<img src="./screenshots/2.png"/>
